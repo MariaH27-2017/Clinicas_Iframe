@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Clinicas_Iframe.Models.Clinics>
+
+
+@{
+    ViewData["Title"] = "Clinics List";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>
+    <a class="btn btn-outline-info" asp-action="Create">Register</a>
+    <partial name="ModalClinicsList" />
+</p>
+<partial name="_ClinicsList" />
+

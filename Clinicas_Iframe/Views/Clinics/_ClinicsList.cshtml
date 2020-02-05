@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Clinicas_Iframe.Models.Clinics>
+
+    <div class="col-md-8">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        <i class="fas fa-desktop"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+
+                        <td class="text-right">
+                            <a asp-controller="Clinics" asp-action="Details" asp-route-id="@item.Id"><img src="~/Images/monitor3.png" class="img-circle" width="29" height="29" /></a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+

@@ -1,0 +1,30 @@
+﻿@model Clinicas_Iframe.Models.Clinics
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style type="text/css">
+    #imgpos {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -110px;
+        margin-top: -40px;
+    }
+</style>
+<div align="left">
+    <img src="~/Images/logo.png" alt="User Image" class="img-circle " width="140" height="80" />
+    @*<img src="~/Images/logo.png" id="imgpos" alt="User Image" class="img-circle " width="130" height="70"/>*@
+    <br />
+    <hr />
+    <h3 align="center">@Model.Name</h3>
+</div>
+
+<div>
+    <hr />
+    <iframe src="@Model.SiteAdress" width="1100" height="450" frameborder="0" allowfullscreen></iframe>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Index">Back to List</a>
+    <br />
+</div>
